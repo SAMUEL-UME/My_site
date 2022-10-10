@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+:root {
+  --primary-color: #050505;
+  --white-color: #f7f9f9;
+  --sub-color: #ff9505;
+  --secondary-color: #151515;
+}
+
+body{
+    overflow: hidden;
+}
+/* header */
+.header {
+  width: 100%;
+  height: 100vh;
+  max-height: 100vh;
+  background: var(--sub-color);
+  /* overflow: hidden; */
+}
+
+/* Media query for navbar */
+.navbar-container {
+  background-color: var(--secondary-color);
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  height: 13vh;
+}
+nav h2 {
+  color: var(--white-color);
+  font-size: 35px;
+  letter-spacing: 1px;
+  padding-top: 20px;
+  padding-left: 60px;
+}
+nav h2 .sub-col {
+  color: var(--sub-color);
+}
+.nav-links {
+  position: absolute;
+  width: 50%;
+  background-color: var(--secondary-color);
+  height: 100vh;
+  right: 1px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  /* padding: 40px; */
+  padding-top: 60px;
+  padding-bottom: 20px;
+  padding-left: 50px;
+  z-index: 99;
+  transform: translateX(370px);
+  transition: 0.5s ease-in;
+}
+.active {
+  transform: translateX(0px);
+}
+.nav-links li {
+  width: 80%;
+  border-bottom: 3px solid var(--white-color);
+  padding-bottom: 10px;
+  transition: 0.3s ease-in;
+}
+.nav-links li {
+  list-style: none;
+}
+.nav-links li a {
+  text-decoration: none;
+  color: var(--white-color);
+  font-size: 20px;
+  transition: 0.3s ease-in;
+}
+.nav-links li:hover,
+.nav-links li a:hover {
+  color: var(--sub-color);
+  border-color: var(--sub-color);
+}
+
+.hamburger {
+  top: 40px;
+  right: 10px;
+  width: 50px;
+  z-index: 999;
+  height: 6px;
+  background: var(--sub-color);
+  position: absolute;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: 0.5s;
+}
+.hamburger:before {
+  top: -16px;
+}
+
+.hamburger:after {
+  top: 16px;
+}
+.icon-one {
+  position: absolute;
+  top: 0px;
+  right: 10px;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+}
+.hamburger-one:before,
+.hamburger-one:after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 6px;
+  background: #fcfcfc;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: 0.5s;
+}
+
+.icon-one.active-one .hamburger-one {
+  background: rgba(0, 0, 0, 0);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0);
+}
+
+.icon-one.active-one .hamburger-one:before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.icon-one.active-one .hamburger-one:after {
+  top: 0;
+  transform: rotate(135deg);
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+}
+/* mmmmmmmmmmmmmmmmm */
+
+
+/* Hero section */
+.hero-container {
+  background-color: var(--primary-color);
+  width: 100%;
+  height: 85%;
+  overflow: hidden;
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* hero content */
+.hero-content {
+  width: 40%;
+  /* color: #fff; */
+  color: #9fa3a3;
+}
+.hero-content h1 {
+  font-size: 40px;
+  padding-bottom: 25px;
+  letter-spacing: 1px;
+}
+.hero-content p {
+  font-size: 20px;
+  letter-spacing: 2px;
+  padding-bottom: 40px;
+}
+
+.btn {
+  background-color: var(--sub-color);
+  border: none;
+  color: var(--white-color);
+  transition: 200ms 0.002s ease-in-out;
+}
+.hero-btn {
+  text-decoration: none;
+  color: var(--white-color);
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 600;
+}
+.hero-btn {
+  padding: 15px 30px;
+  border-radius: 10px;
+}
+.hero-btn a:hover {
+  color: var(--sub-color);
+}
+.btn:hover,
+.btn:focus {
+  background-color: transparent;
+  border: 2px solid var(--sub-color);
+  color: var(--sub-color);
+}
+
+/* hero image */
+.hero-image {
+  max-width: 55%;
+}
+.hero-image img {
+  width: 125%;
+  height: 110%;
+}
+
+.line {
+  width: 100%;
+  height: 1vh;
+  background: var(--white-color);
+}
+.cl {
+  background: var(--sub-color);
+  height: 1vh;
+}
